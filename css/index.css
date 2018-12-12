@@ -1,0 +1,376 @@
+:root {
+  --color-accent: #0E2635;
+  --color-light: #F7F7F7;
+  --color-hover: #5B8995;
+
+  --font-family-main: 'Playfair Display', serif;
+  --font-family-complimentary:  'Fira Sans Condensed', sans-serif;
+  --font-family-paragraph: 'Libre Franklin', sans-serif;
+}
+body {
+  margin: 0;
+}
+main {
+  top: 97%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: var(--color-hover);
+}
+h1 {
+  font-family: var(--font-family-main);
+  font-size: 3.3em;
+}
+h2 {
+  font-family: var(--font-family-complimentary);
+}
+p {
+  font-family: var(--font-family-paragraph);
+  font-size: .8em;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+/* MENU */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  width: 100vw;
+  height: 55px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--color-accent);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+
+  font-family: var(--font-family-complimentary);
+}
+nav a {
+  color: var(--color-light);
+  text-align: center;
+}
+.menu__links {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.85em;
+  font-weight: 600;
+}
+.menu__links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  padding: 0 10px;
+  text-align: center;
+}
+.menu__some {
+  margin-left: 1%;
+  font-size: 30px;
+}
+.current-page {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* BUTTONS */
+button {
+  height: 32px;
+  padding: 5px 15px;
+  margin: 10px;
+
+  border: 2px solid var(--color-light);
+  border-radius: 5px;
+
+  font-family: var(--font-family-complimentary);
+  font-size: 0.85em;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--color-hover);
+}
+.btn--dark {
+  color: var(--color-light);
+  background-color: rgba(255, 255, 255, 0.30);
+}
+.btn--light {
+  color: var(--color-accent);
+  background-color: var(--color-light);
+}
+.btn--blue {
+  border: none;
+  box-shadow: 0 3px 6px gray;
+  color: var(--color-light);
+  background-color: var(--color-accent);
+}
+.btnCv {
+
+}
+
+/* ABOUT */
+.wrapper__about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+  width: 100vw;
+
+  color: var(--color-light);
+
+  background-color: #162431;
+}
+.about__img {
+  height: 100%;
+}
+.about__text {
+  width: 34%;
+  margin-right: 6%;
+  margin-left: 3%;
+}
+.about__text h1 {
+  margin: 0;
+}
+.about__text h2 {
+
+}
+#artistAboutText {
+  font-family: var(--font-family-paragraph);
+  font-size: 1em;
+  line-height: 1.4;
+}
+.about__buttons {
+  margin-top: 20%;
+}
+
+
+/*** SECTION GALLERY ***/
+.wrapper__gallery {
+  height: 80vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery__thumbnails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 13%;
+  margin-right: 1%;
+
+  background-color: var(--color-light);
+}
+.gallery__preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+
+  background-color: var(--color-light);
+}
+.gallery__thumbnails img {
+  width: 70%;
+  margin: 4px;
+  cursor: pointer;
+  filter: brightness(50%);
+}
+.gallery__thumbnails img:hover {
+  filter: brightness(100%);
+}
+.thumbnail__btn {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  margin: 4px;
+}
+.thumbnail__btn img {
+  width: 100%;
+  cursor: auto;
+}
+.thumbnail__btn img:hover {
+  filter: brightness(50%);
+}
+.thumbnail__btn button {
+  position: absolute;
+  top: 35%;
+  left: -15%;
+
+  width: 110%;
+  height: 60%;
+}
+#galleryPreview {
+  width: 90%;
+  height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#video {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+#picture {
+  height: 100%;
+}
+
+/* SECTION ACTING CREDITS */
+.wrapper__credits {
+  width: 89%;
+  margin: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-accent);
+}
+.credits__header {
+  width: 92%;
+  height: 100px;
+  margin: 0;
+  padding-left: 8%;
+  padding-bottom: 8px;
+
+  display: flex;
+  align-items: flex-end;
+
+  font-size: 2.4em;
+
+  background-color: var(--color-light);
+}
+#credits__movies {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+}
+.movie-card {
+  width: 20%;
+  height: 250px;
+  margin-right: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  color: var(--color-accent);
+  font-family: var(--font-family-complimentary);
+  background-color: var(--color-light);
+}
+.movie-card:last-child {
+  margin-right: 0;
+}
+.movie-card img {
+  width: 90%;
+  height: 100px;
+  margin-top: 8px;
+}
+.movie-card a {
+  color: var(--color-accent);
+  font-size: 2em;
+}
+.movie-card a:hover {
+  color: var(--color-hover);
+}
+.movie-card h3 {
+  margin: 8px 4px 4px;
+  font-size: 1.2em;
+}
+.movie-card p {
+  margin: 4px;
+  font-size: 0.8em;
+}
+.wrapper__credits button {
+  height: 50px;
+  width: 250px;
+  margin: 20px 100px 100px;
+
+  border: 2px solid var(--color-accent);
+}
+
+/* FOOTER */
+footer {
+  width: 100vw;
+  height: 30vh;
+
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.2);
+}
+.contacts {
+  width: 100%;
+  height: 70%;
+  padding: 1% 5%;
+
+  display: flex;
+}
+.contacts div {
+  width: 25%;
+  margin-right: 30px;
+  border-bottom: 1px solid var(--color-light);
+}
+.contacts__name {
+  margin-bottom: 0;
+  font-size: 2em;
+  font-family: var(--font-family-main);
+}
+.contacts__title {
+  margin-top: 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: var(--font-family-complimentary);
+}
+.footer__some {
+  margin: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__some a {
+  margin-left: 5px;
+  color: var(--color-light);
+}
+.footer__some a:hover {
+  color: var(--color-hover);
+}
+.contacts__phone {
+  margin-bottom: 0;
+}
+.contacts__email {
+  margin-top: 0;
+}

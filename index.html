@@ -2,10 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/index.css">
+    <meta name="robots" content="noindex">
+    <meta name="AdsBot-Google" content="noindex" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Libre+Franklin:400,500|Playfair+Display:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>About Actor Dan Zahle</title>
 </head>
-<body>
+<body class="absolute">
 
+<!-- NAVIGATION MENU BAR-->
+    <nav>
+        <section class="menu__some">
+            <a href="https://www.facebook.com/dan.zahle" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/dan_zahle/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.imdb.com/name/nm0951969/?ref_=nv_sr_1" target="_blank"><i class="fab fa-imdb"></i></a>
+        </section>
+        <section class="menu__links">
+            <a class="current-page" href="index.html">ABOUT ME</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="acting-credits.html">ACTING CREDITS</a>
+            <a href="production-company.html">PRODUCTION COMPANY</a>
+            <a href="contacts.html">CONTACTS</a>
+            <button class="btnCv btn--light">DOWNLOAD FULL CV</button>
+        </section>
+
+    </nav>
+<!-- ABOUT SECTION -->
+    <section class="wrapper__about">
+        <img class="about__img" src="images/hero-img_actor-dan-zahle-v2.png" alt="Dan Zahle Danish Actor">
+        <div class="about__text">
+            <h1 id="artistName">Dan Zahle</h1>
+            <h2>Actor</h2>
+            <p id="artistAboutText"></p>
+            <div class="about__buttons">
+                <button class="btnCv btn--light">DOWNLOAD FULL CV</button>
+                <button class="btn--dark" onclick={window.location.href="contacts.html"}>CONTACT ME</button>
+            </div>
+        </div>
+    </section>
+
+<!-- MAIN -->
+    <main class="absolute">
+
+    <!-- GALLERY SECTION-->
+        <section class="wrapper__gallery">
+            <div class="gallery__thumbnails">
+                <img id="demoVideoOne" src="images/actor-dan-zahle_showreel-thumbnail.png"
+                     alt="Interview of actor Dan Zahle">
+                <img id="demoVideoTwo"
+                     src="images/actor-dan-zahle_showreel_thumbnail2.png"
+                     alt="Reel Demo of actor Dan Zahle">
+                <img id="demoVideoThree"
+                     src="images/actor-dan-zahle_headshot-thumbnail.png"
+                     alt="Professional Headshot of actor Dan Zahle">
+                <img id="demoVideoFour"
+                     src="images/actor-dan-zahle_headshot-thumbnail2.png"
+                     alt="Work picture of actor Dan Zahle">
+                <div class="thumbnail__btn">
+                    <img src="images/dan-zahle_gallery-btn.jpg" alt="Gallery preview of actor Dan Zahle">
+                    <button class="btn--blue" onclick={window.location.href="gallery.html"}>SEE ALL GALLERY</button>
+                </div>
+            </div>
+            <div class="gallery__preview">
+                <div id="galleryPreview">
+                    <!--I found out, that adding a video in HTML from YouTube requires using iFrames:-->
+                    <!--https://www.w3schools.com/html/html_youtube.asp-->
+                    <iframe id="video" src="" frameborder="0"></iframe>
+                    <img id="picture" src="" alt="Preview of actor's Dan Zahle photo">
+                </div>
+            </div>
+        </section>
+
+    <!-- ACTING CREDITS SECTION-->
+        <section class="wrapper__credits">
+            <h1 class="credits__header">Acting Credits</h1>
+            <div id="credits__movies"></div>
+            <button onclick={window.location.href="acting-credits.html"}>SEE ALL ACTING CREDITS</button>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <section class="contacts">
+                <div>
+                    <h2 class="contacts__name">Name Manager</h2>
+                    <h3 class="contacts__title">Manager</h3>
+                    <p class="contacts__phone">Phone nr</p>
+                    <p class="contacts__email">email</p>
+                </div>
+                <div>
+                    <h2 class="contacts__name">Dan Zahle</h2>
+                    <h3 class="contacts__title">Actor</h3>
+                    <p class="contacts__phone">Phone nr</p>
+                    <p class="contacts__email">email</p>
+                </div>
+            </section>
+            <section class="footer__some">
+                <p>Multimedia Design @ KEA: group 11 final project</p>
+                <div>
+                    <a href="https://www.facebook.com/dan.zahle" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/dan_zahle/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.imdb.com/name/nm0951969/?ref_=nv_sr_1" target="_blank"><i class="fab fa-imdb"></i></a>
+                </div>
+            </section>
+        </footer>
+
+    </main>
+
+<template id="movieCardTpl">
+    <div class="movie-card">
+        <img src="https://via.placeholder.com/200x150" alt="Movie poster where Dan Zahle played">
+        <h3>Movie title</h3>
+        <p class="movie-role">Role of Dan</p>
+        <p class="movie-year">Year</p>
+        <a href="" target="_blank"><i class="fab fa-imdb"></i></a>
+    </div>
+</template>
+    <script src="js/index.js"></script>
 </body>
 </html>
