@@ -4,6 +4,12 @@
     nav {
         display: none;
     }
+    main {
+        margin-top: 10px;
+    }
+    footer{
+        display: none;
+    }
     #menuToggle {
         display: block;
     }
@@ -14,5 +20,60 @@
         height: auto;
         font-size: 30px;
     }
+    .wrapper__about {
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+    }
+    .about__img {
+        width: 60%;
+        height: auto;
+    }
+    .about__text {
+        width: 60%;
+        padding: 8% 10%;
+        margin-top: -200px;
+        background-color: var(--color-accent);
+    }
+    .wrapper__gallery {
+        width: 100%;
+        flex-direction: column;
+    }
+    .gallery__thumbnails {
+        flex-direction: row;
+        height: 100px;
+        width: 100vw;
+    }
+    .gallery__preview {
+        height: 80%;
+        width: 100%;
+    }
+    .gallery__thumbnails img {
+        width: 19%;
+    }
+    .thumbnail__btn {
+        width: 19%;
+    }
+    .thumbnail__btn img {
+        width: 100%;
+    }
+    .thumbnail__btn button {
+        position: absolute;
+        top: 35%;
+        left: -10px;
+
+        width: 100%;
+        height: auto;
+    }
+    #galleryPreview {width: 95%;}
+    .wrapper__credits {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    #credits__movies {
+        margin-top: 8px;
+    }
+
 
 }
