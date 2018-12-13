@@ -493,6 +493,8 @@ ul a {
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+
+/* HEADER */
 .section__header {
   height: 25vh;
   width: 100vw;
@@ -519,4 +521,19 @@ ul a {
   height: 100%;
 }
 
+/* SECTION ABOUT COMPANY */
+.section__about-company {
+  width: 95vw;
+
+}
+.section__about-company h1 {
+  width: 95vw;
+  font-size: 2em;
+  margin: 8px 0;
+  padding-top: 5%;
+  padding-left: 5%;
+
+  color: var(--color-accent);
+  background-color: var(--color-light);
+}
 
