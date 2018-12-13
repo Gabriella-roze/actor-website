@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <meta name="AdsBot-Google" content="noindex" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -26,8 +27,31 @@
             <a href="contacts.html">CONTACTS</a>
             <button class="btnCv btn--light">DOWNLOAD FULL CV</button>
         </section>
-
     </nav>
+
+<!-- MOBILE NAVIGATION -->
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <h1>Dan Zahle</h1>
+            <h2>Actor</h2>
+            <section class="menu__some">
+                <a href="https://www.facebook.com/dan.zahle" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/dan_zahle/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.imdb.com/name/nm0951969/?ref_=nv_sr_1" target="_blank"><i class="fab fa-imdb"></i></a>
+            </section>
+            <a class="current-page" href="index.html">ABOUT ME</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="acting-credits.html">ACTING CREDITS</a>
+            <a href="production-company.html">PRODUCTION COMPANY</a>
+            <a href="contacts.html">CONTACTS</a>
+            <button class="btnCv btn--light">DOWNLOAD FULL CV</button>
+        </ul>
+    </div>
+
 <!-- ABOUT SECTION -->
     <section class="wrapper__about">
         <img class="about__img" src="images/hero-img_actor-dan-zahle-v2.png" alt="Dan Zahle Danish Actor">
@@ -78,19 +102,19 @@
         <section class="wrapper__credits">
             <h1 class="credits__header">Acting Credits</h1>
             <div id="credits__movies"></div>
-            <button onclick={window.location.href="acting-credits.html"}>SEE ALL ACTING CREDITS</button>
+            <button class="btn--blue" onclick={window.location.href="acting-credits.html"}>SEE ALL ACTING CREDITS</button>
         </section>
 
         <!-- FOOTER -->
         <footer>
             <section class="contacts">
-                <div>
+                <div id="manager">
                     <h2 class="contacts__name">Name Manager</h2>
                     <h3 class="contacts__title">Manager</h3>
                     <p class="contacts__phone">Phone nr</p>
                     <p class="contacts__email">email</p>
                 </div>
-                <div>
+                <div id="actor">
                     <h2 class="contacts__name">Dan Zahle</h2>
                     <h3 class="contacts__title">Actor</h3>
                     <p class="contacts__phone">Phone nr</p>
@@ -106,9 +130,9 @@
                 </div>
             </section>
         </footer>
-
     </main>
 
+<!-- TEMPLATE -->
 <template id="movieCardTpl">
     <div class="movie-card">
         <img src="https://via.placeholder.com/200x150" alt="Movie poster where Dan Zahle played">
@@ -118,6 +142,6 @@
         <a href="" target="_blank"><i class="fab fa-imdb"></i></a>
     </div>
 </template>
-    <script src="js/index.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

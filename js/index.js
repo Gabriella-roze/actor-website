@@ -22,7 +22,6 @@ const demoVideoOne = document.getElementById("demoVideoOne");
 const demoVideoTwo = document.getElementById("demoVideoTwo");
 const demoVideoThree = document.getElementById("demoVideoThree");
 const demoVideoFour = document.getElementById("demoVideoFour");
-const galleryPreview = document.getElementById("galleryPreview");
 const video = document.getElementById("video");
 const picture = document.getElementById("picture");
 
@@ -35,24 +34,22 @@ demoVideoFour.addEventListener('click', () => {previewImage("four")});
 // Add a video on load
 previewImage("one");
 function previewImage(image) {
-  console.log(image);
-
   if (image === "one") {
     picture.style.display = "none";
-    video.style.display = "initial";
     video.src = "https://www.youtube.com/embed/y8QSy5TR4wY";
+    video.style.display = "initial";
   } else if (image === "two") {
     picture.style.display = "none";
-    video.style.display = "initial";
     video.src = "https://www.youtube.com/embed/DqSzdsmK5fA";
+    video.style.display = "initial";
   } else if (image === "three") {
     video.style.display = "none";
+    picture.src = "images/actor-dan-zahle_headshot.jpg";
     picture.style.display = "initial";
-    picture.src = "images/actor-dan-zahle_headshot.jpg"
   } else {
     video.style.display = "none";
+    picture.src = "images/actor-dan-zahle_headshot2.png";
     picture.style.display = "initial";
-    picture.src = "images/actor-dan-zahle_headshot2.png"
   }
 }
 
@@ -65,7 +62,7 @@ fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/featured_projects/
   .then(populateMovies);
 function populateMovies( movies ) {
   movies.forEach(movie => {
-    console.log(movie);
+    // console.log(movie);
     const tpl = movieCardTpl.cloneNode(true);
     tpl.querySelector("img").src = movie._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
     tpl.querySelector("h3").innerHTML = movie.title.rendered;
@@ -75,7 +72,26 @@ function populateMovies( movies ) {
 
     movieParent.appendChild(tpl);
   });
-  // const tpl = movieCardTpl.cloneNode(true);
-
-
 }
+
+// FOOTER
+const manager = document.getElementById("manager");
+const actor = document.getElementById("actor");
+
+fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about")
+.then(data => data.json())
+.then(info => {
+  info.forEach(elem => {
+    if (elem.id === 100) {
+      actor.querySelector(".contacts__phone").innerHTML = "<i class=\"fas fa-mobile-alt\"></i> " + " " + elem.acf.phone_number;
+      actor.querySelector(".contacts__email").innerHTML = "<i class=\"fas fa-envelope\"></i> " + " " + elem.acf.email;
+    }
+    else if (elem.id === 143) {
+      manager.querySelector("h2").innerHTML = elem.title.rendered;
+      manager.querySelector(".contacts__phone").innerHTML = "<i class=\"fas fa-mobile-alt\"></i> " + " " + elem.acf.phone_number;
+      manager.querySelector(".contacts__email").innerHTML = "<i class=\"fas fa-envelope\"></i> " + " " + elem.acf.email;
+    }
+  });
+
+
+});
