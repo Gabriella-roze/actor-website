@@ -489,10 +489,34 @@ ul a {
   font-size: 20px;
   color: var(--color-light);
 }
-
-
 /* slide it in */
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+.section__header {
+  height: 25vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--color-light);
+  background-color: #162431;
+}
+.header__text {
+  margin: 0 5%;
+}
+.header__text h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+.header__text h2 {
+  margin: 0;
+  font-size: 1.3em;
+}
+.header__img {
+  margin-left: 12%;
+  height: 100%;
+}
+
 
