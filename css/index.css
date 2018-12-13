@@ -493,22 +493,3 @@ ul a {
   transform: none;
 }
 
-
-/* MEDIA QUERIES*/
-/* Phone and tablet screens*/
-@media screen and (max-width: 800px) {
-  nav {
-  display: none;
-  }
-  #menuToggle {
-    display: block;
-  }
-  .menu__some {
-    margin-left: 0;
-    padding-bottom: 4%;
-    width: 90%;
-    height: auto;
-    font-size: 30px;
-  }
-
-}
