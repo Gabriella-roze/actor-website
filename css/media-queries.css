@@ -41,18 +41,19 @@
     }
     .gallery__thumbnails {
         flex-direction: row;
-        height: 100px;
-        width: 100vw;
+        margin-top: 10px;
+        height: 150px;
+        width: 100%;
     }
     .gallery__preview {
-        height: 80%;
+        height: 70%;
         width: 100%;
     }
     .gallery__thumbnails img {
-        width: 19%;
+        width: 17%;
     }
     .thumbnail__btn {
-        width: 19%;
+        width: 17%;
     }
     .thumbnail__btn img {
         width: 100%;
@@ -64,8 +65,9 @@
 
         width: 100%;
         height: auto;
+        text-align: center;
     }
-    #galleryPreview {width: 95%;}
+    #galleryPreview {max-width: 90%;}
     .wrapper__credits {
         width: 100%;
         height: auto;
@@ -73,6 +75,28 @@
     }
     #credits__movies {
         margin-top: 8px;
+    }
+    #galleryPreview { max-width: 90vw;}
+    @media screen and (max-width: 470px){
+        #demoVideoFour, #demoVideoTwo {
+            display: none;
+        }
+        .gallery__thumbnails img {
+            width: 20%;
+        }
+        .thumbnail__btn {
+            width: 20%;
+        }
+        .thumbnail__btn img {
+            width: 100%;
+        }
+        .gallery__preview {
+            height: 50%;
+            width: 100%;
+        }
+        .wrapper__gallery {
+            height: 60vh;
+        }
     }
 
 
