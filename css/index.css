@@ -587,6 +587,9 @@ ul a {
 .img-thumbnail:hover {
   filter: brightness(100%);
 }
+.highlighted {
+  filter: brightness(100%);
+}
 
 /* SECTION CONTACTS */
 .contacts__container {
