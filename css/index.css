@@ -575,7 +575,6 @@ ul a {
 
   display: flex;
   flex-wrap: wrap;
-
 }
 .img-thumbnail {
   height: 100px;
@@ -609,7 +608,7 @@ ul a {
 .contacts__card {
   width: 300px;
 }
-section__contacts {
 
-}
+/* SECTION CREDITS */
+
 
