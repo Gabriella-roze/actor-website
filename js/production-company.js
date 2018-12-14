@@ -18,7 +18,7 @@ fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/umdieecke_posters?
   .then(posters => {
     posters.forEach(poster => {
       const tplCopy = tplThumbnail.cloneNode(true);
-      let posterImg = poster._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+      let posterImg = poster._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
       changeImgPreview(posterImg);
       tplCopy.querySelector(".img-thumbnail").src = posterImg;
       tplCopy.querySelector(".img-thumbnail").addEventListener("click", () => changeImgPreview(posterImg));
