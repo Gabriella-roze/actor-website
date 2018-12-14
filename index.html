@@ -105,6 +105,16 @@
             <div id="credits__movies"></div>
             <button class="btn--blue" onclick={window.location.href="acting-credits.html"}>SEE ALL ACTING CREDITS</button>
         </section>
+        <!-- TEMPLATE -->
+        <template id="movieCardTpl">
+            <div class="movie-card">
+                <img src="" alt="Movie poster where Dan Zahle played">
+                <h3>Movie title</h3>
+                <p class="movie-role">Role of Dan</p>
+                <p class="movie-year">Year</p>
+                <a href="" target="_blank"><i class="fab fa-imdb"></i></a>
+            </div>
+        </template>
 
         <!-- FOOTER -->
         <footer>
@@ -133,16 +143,6 @@
         </footer>
     </main>
 
-<!-- TEMPLATE -->
-<template id="movieCardTpl">
-    <div class="movie-card">
-        <img src="https://via.placeholder.com/200x150" alt="Movie poster where Dan Zahle played">
-        <h3>Movie title</h3>
-        <p class="movie-role">Role of Dan</p>
-        <p class="movie-year">Year</p>
-        <a href="" target="_blank"><i class="fab fa-imdb"></i></a>
-    </div>
-</template>
 <script src="js/global.js"></script>
 <script src="js/index.js"></script>
 </body>

@@ -205,7 +205,7 @@ button:hover {
   width: 70%;
   margin: 4px;
   cursor: pointer;
-  filter: brightness(50%);
+  filter: brightness(30%);
 }
 .gallery__thumbnails img:hover {
   filter: brightness(100%);
@@ -266,7 +266,7 @@ button:hover {
   color: var(--color-accent);
 }
 .credits__header {
-  width: 92%;
+  width: 91%;
   height: 100px;
   margin: 0;
   padding-left: 8%;
@@ -287,8 +287,9 @@ button:hover {
   flex-wrap: wrap;
 }
 .movie-card {
-  min-width: 140px;
-  max-height: 250px;
+  width: 19%;
+  min-width: 150px;
+  min-height: 250px;
   margin-right: 8px;
   margin-bottom: 8px;
 

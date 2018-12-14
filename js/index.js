@@ -18,16 +18,18 @@ const video = document.getElementById("video");
 const picture = document.getElementById("picture");
 
 
-demoVideoOne.addEventListener('click', () => {previewImage("one")});
-demoVideoTwo.addEventListener('click', () => {previewImage("two")});
-demoVideoThree.addEventListener('click', () => {previewImage("three")});
-demoVideoFour.addEventListener('click', () => {previewImage("four")});
+demoVideoOne.addEventListener('click', () => {previewImage("one", demoVideoOne)});
+demoVideoTwo.addEventListener('click', () => {previewImage("two", demoVideoTwo)});
+demoVideoThree.addEventListener('click', () => {previewImage("three", demoVideoThree)});
+demoVideoFour.addEventListener('click', () => {previewImage("four", demoVideoFour)});
 
 // Add a video on load
-previewImage("one");
+previewImage("one", demoVideoOne);
 
 // Change preview image
-function previewImage(image) {
+function previewImage(image, btnClicked) {
+  console.log('image-btn: ', image, btnClicked)
+  btnClicked.classList.add("highlighted");
   if (image === "one") {
     picture.style.display = "none";
     video.src = "https://www.youtube.com/embed/y8QSy5TR4wY";
