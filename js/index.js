@@ -25,6 +25,8 @@ demoVideoFour.addEventListener('click', () => {previewImage("four")});
 
 // Add a video on load
 previewImage("one");
+
+// Change preview image
 function previewImage(image) {
   if (image === "one") {
     picture.style.display = "none";
