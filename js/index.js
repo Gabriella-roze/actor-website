@@ -16,6 +16,7 @@ const demoVideoThree = document.getElementById("demoVideoThree");
 const demoVideoFour = document.getElementById("demoVideoFour");
 const video = document.getElementById("video");
 const picture = document.getElementById("picture");
+const intVideo = document.getElementById("intVideo");
 
 
 demoVideoOne.addEventListener('click', () => {previewImage("one", demoVideoOne)});
@@ -32,18 +33,22 @@ function previewImage(image, btnClicked) {
   btnClicked.classList.add("highlighted");
   if (image === "one") {
     picture.style.display = "none";
+    intVideo.style.display = "none";
     video.src = "https://www.youtube.com/embed/y8QSy5TR4wY";
     video.style.display = "initial";
   } else if (image === "two") {
     picture.style.display = "none";
-    video.src = "https://www.youtube.com/embed/DqSzdsmK5fA";
-    video.style.display = "initial";
+    video.style.display = "none";
+    intVideo.src = "interview_video.mp4";
+    intVideo.style.display = "initial";
   } else if (image === "three") {
     video.style.display = "none";
+    intVideo.style.display = "none";
     picture.src = "images/actor-dan-zahle_headshot.jpg";
     picture.style.display = "initial";
   } else {
     video.style.display = "none";
+    intVideo.style.display = "none";
     picture.src = "images/actor-dan-zahle_headshot2.png";
     picture.style.display = "initial";
   }

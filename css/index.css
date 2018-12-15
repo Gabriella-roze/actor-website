@@ -252,6 +252,9 @@ button:hover {
 #picture {
   height: 100%;
 }
+#intVideo {
+  height: 100%;
+}
 
 /* SECTION ACTING CREDITS */
 .wrapper__credits {
@@ -308,7 +311,7 @@ button:hover {
 }
 .movie-card img {
   width: 90%;
-  height: 100px;
+  height: 120px;
   margin-top: 8px;
 }
 .movie-card a {
@@ -534,10 +537,12 @@ ul a {
 }
 .section__about-company h1 {
   width: 95%;
-  font-size: 1.8em;
   margin: 8px 0;
   padding-top: 5%;
   padding-left: 5%;
+  padding-bottom: 1%;
+
+  font-size: 1.8em;
 
   color: var(--color-accent);
   background-color: var(--color-light);
@@ -614,5 +619,30 @@ ul a {
 }
 
 /* SECTION CREDITS */
+.accordion__container {
+  width: 100%;
 
+  /*background-color: var(--color-light);*/
+}
+.accordion__category {
+  width: 90%;
+  padding: 0 5%;
+  margin: 8px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-light);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.accordion__category:hover {
+  background-color: var(--color-hover);
+}
+.accordion__category h2 {
+  color: var(--color-accent);
+  font-size: 1.1em;
+  font-weight: 600;
+}
 

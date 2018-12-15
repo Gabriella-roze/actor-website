@@ -1,18 +1,10 @@
 /* MEDIA QUERIES*/
 /* Phone and tablet screens*/
 @media screen and (max-width: 800px) {
-    nav {
-        display: none;
-    }
-    main {
-        margin-top: 10px;
-    }
-    footer{
-        display: none;
-    }
-    #menuToggle {
-        display: block;
-    }
+    nav {display: none;}
+    main {margin-top: 10px;}
+    footer{display: none;}
+    #menuToggle {display: block;}
     .menu__some {
         margin-left: 0;
         padding-bottom: 4%;
@@ -49,15 +41,9 @@
         height: 70%;
         width: 100%;
     }
-    .gallery__thumbnails img {
-        width: 17%;
-    }
-    .thumbnail__btn {
-        width: 17%;
-    }
-    .thumbnail__btn img {
-        width: 100%;
-    }
+    .gallery__thumbnails img {width: 17%;}
+    .thumbnail__btn {width: 17%;}
+    .thumbnail__btn img {width: 100%;}
     .thumbnail__btn button {
         position: absolute;
         top: 35%;
@@ -73,24 +59,16 @@
         height: auto;
         margin: 0;
     }
-    #credits__movies {
-        margin-top: 8px;
-    }
+    #credits__movies {margin-top: 8px;}
     #galleryPreview { max-width: 90vw;}
-    .section__about-company {
-        width: 100%;
-    }
+    .section__about-company {width: 100%;}
     .about-company__text {
         width: 50%;
         padding: 10% 15%;
         margin-bottom: 8px;
     }
-    #teaxtAboutCompany {
-        font-size: 18px;
-    }
-    .about-company__gallery {
-        width: 100%;
-    }
+    #teaxtAboutCompany {font-size: 18px;}
+    .about-company__gallery {width: 100%;}
     .about-company__text--container {
         flex-direction: column;
         justify-content: center;
@@ -102,9 +80,7 @@
         padding: 1% 0;
         flex-direction: column;
     }
-    .contacts__card {
-        width: 100%;
-    }
+    .contacts__card {width: 100%;}
     #contacts__img {
         height: 40vh;
         width: auto;
@@ -116,31 +92,18 @@
     }
 
     @media screen and (max-width: 470px){
-        #demoVideoFour, #demoVideoTwo {
-            display: none;
-        }
-        .gallery__thumbnails img {
-            width: 20%;
-        }
-        .thumbnail__btn {
-            width: 20%;
-        }
-        .thumbnail__btn img {
-            width: 100%;
-        }
+        #demoVideoFour, #demoVideoTwo {display: none;}
+        .gallery__thumbnails img {width: 20%;}
+        .thumbnail__btn {width: 20%;}
+        .thumbnail__btn img {width: 100%;}
         .gallery__preview {
             height: 50%;
             width: 100%;
         }
-        .wrapper__gallery {
-            height: 60vh;
-        }
+        .wrapper__gallery {height: 60vh;}
         #contacts__img {
             height: 20vh;
             width: auto;
         }
-
     }
-
-
 }
