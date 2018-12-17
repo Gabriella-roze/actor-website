@@ -1,8 +1,39 @@
+:root {
+    --color-accent: #0E2635;
+    --color-light: #F7F7F7;
+    --color-hover: #5B8995;
+
+    --font-family-main: 'Playfair Display', serif;
+    --font-family-complimentary:  'Fira Sans Condensed', sans-serif;
+    --font-family-paragraph: 'Libre Franklin', sans-serif;
+}
+
 .cat__menu{
     display: flex;
+    flex-wrap: wrap;
     background-color: #f7f7f7;
+    width: 100%;
+    align-items: center;
 }
 
 .img{
+width: 200px;
+height: 200px;
+    margin: 4px;
+background-size: cover;
 
+}
+
+.gallery__container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bold{
+    font-weight: bold;
+}
+.cat{
+    font-family: var( --font-family-complimentary);
+    margin-right: 10px;
+    margin-left: 10px;
+    color: var(--color-accent);
 }
