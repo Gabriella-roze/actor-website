@@ -37,3 +37,44 @@ background-size: cover;
     margin-left: 10px;
     color: var(--color-accent);
 }
+
+
+/*loader*/
+
+.loader{
+    position: absolute;
+    top:49vh;
+    left:49vw;
+    width: 60px;
+    height: 60px;
+    border: 2px var(--color-accent) solid;
+    border-radius: 50%;
+    -webkit-animation: rotation 1s ease-in-out infinite;
+    -moz-animation: rotation 1s ease-in-out infinite;
+    animation: rotation 1s ease-in-out infinite;
+    margin: 30px auto;
+}
+.loader:after{
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-accent);
+    border-radius: 100%;
+    position: absolute;
+    content: "";
+}
+@-webkit-keyframes rotation{
+    0%{-webkit-transform: rotate(0deg);}
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotation{
+    0%{-moz-transform: rotate(0deg);}
+    100%{-moz-transform: rotate(360deg);}
+}
+@keyframes rotation{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.hide{
+    display: none;
+}
