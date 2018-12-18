@@ -1,5 +1,5 @@
 /* MEDIA QUERIES*/
-/* Phone and tablet screens*/
+/* Wide screen phone and tablet screens */
 @media screen and (max-width: 800px) {
     nav {display: none;}
     main {margin-top: 10px;}
@@ -90,7 +90,7 @@
         width: 90%;
         margin: 0;
     }
-
+    /* Narrow phone screens*/
     @media screen and (max-width: 470px){
         #demoVideoFour, #demoVideoTwo {display: none;}
         .gallery__thumbnails img {width: 20%;}
@@ -110,6 +110,4 @@
             height: 150px;
         }
     }
-
-
 }
