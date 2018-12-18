@@ -2,6 +2,8 @@ const params= new URLSearchParams(window.location.search);
 const catID = params.get("catid");
 const template = document.querySelector('.tmpl_photos').content;
 const loader = document.querySelector('.loader');
+const modal = document.querySelector('.modal');
+const photo = document.querySelector('.img');
 
 function hideLoader() {
     loader.classList.add('hide');
@@ -49,7 +51,7 @@ function showPhotos(photo) {
          const copy = template.cloneNode(true);
          copy.querySelector('.img').style.backgroundImage = `url(${photo._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url})`;
          document.querySelector('.gallery__container').appendChild(copy);
-         hideLoader();
+
      }
      else{
          const copy = template.cloneNode(true);
@@ -58,9 +60,8 @@ function showPhotos(photo) {
      }
 
 });
-
+    hideLoader();
 }
-
-
-
-
+photo.addEventListener("click", function(){
+    modal.classList.add('show_modal');
+});

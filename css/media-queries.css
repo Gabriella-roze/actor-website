@@ -105,5 +105,11 @@
             height: 20vh;
             width: auto;
         }
+        .img{
+            width: 150px;
+            height: 150px;
+        }
     }
+
+
 }
