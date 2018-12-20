@@ -48,6 +48,9 @@ function loadPhotosByCat(catID) {
         .then(showPhotos);
 }
 
+// Save class for later use
+let clickedImgClass;
+
 function showPhotos(photo) {
     console.log(photo);
     photo.forEach((photo, i) => {
@@ -62,7 +65,10 @@ function showPhotos(photo) {
             copy.querySelector('.img').style.backgroundImage = `url(${photo._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url})`;
          }
         copy.querySelector('.img').classList.add(i);
-         copy.querySelector('.img').addEventListener("click", function() {
+          clickedImgClass = i;
+          copy.querySelector('.img').addEventListener("click", function() {
+             clickedImgClass = i;
+             console.log(clickedImgClass);
              modal.classList.add('show_modal');
              modal.querySelector('img').src = activeImg;
              document.querySelector("body").style.overflow = 'hidden';
@@ -81,8 +87,10 @@ ex.addEventListener('click', function(){
 
 
 nextImg.addEventListener('click', function(){
-    
-    modal.querySelector('img').src = ";"
+  clickedImgClass++;
+  let next = modal.querySelector(`.${clickedImgClass}`);
+  console.log(next);
+  // modal.querySelector(clickedImgClass).src = ";"
 });
 
 
