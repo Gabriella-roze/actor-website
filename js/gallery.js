@@ -5,7 +5,7 @@ const loader = document.querySelector('.loader');
 const modal = document.querySelector('.modal');
 const ex = document.querySelector('.fa-times-circle');
 const nextImg = document.querySelector('.fa-angle-right');
-const prevImg = document.querySelector('fa-angle-left');
+const prevImg = document.querySelector('.fa-angle-left');
 
 
 function hideLoader() {
@@ -88,18 +88,18 @@ ex.addEventListener('click', function(){
 
 const galleryContainer = document.querySelector(".gallery__container");
 
-nextImg.addEventListener('click', function(){
-  clickedImgClass++;
-  console.log(clickedImgClass);
+nextImg.addEventListener('click', () => imgNavigationGallery("next"));
+prevImg.addEventListener('click', () => imgNavigationGallery("back"));
+
+function imgNavigationGallery(direction){
+  direction === "next" ? clickedImgClass++ : clickedImgClass--;
+  // console.log(clickedImgClass);
   let nextURL = galleryContainer.querySelector(`.pic${clickedImgClass}`).style.backgroundImage;
-  // We need to remove the "URL(" and ")" from the string that we get.
+  // We need to remove the "URL(" and ")" from the string that we got.
   // https://regexr.com/
   // and
   // https://www.w3schools.com/jsref/jsref_replace.asp
-  let nextLink = nextURL.replace(/url\(|\)|/gi, '');
-  console.log(nextLink);
+  let nextLink = nextURL.replace(/url\("|"\)|/gi, '');
+  // console.log(nextLink);
   modal.querySelector('img').src = nextLink;
-});
-
-
-
+}
