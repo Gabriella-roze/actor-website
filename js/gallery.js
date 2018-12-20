@@ -3,7 +3,10 @@ const catID = params.get("catid");
 const template = document.querySelector('.tmpl_photos').content;
 const loader = document.querySelector('.loader');
 const modal = document.querySelector('.modal');
-const photo = document.querySelector('.img');
+const ex = document.querySelector('.fa-times-circle');
+const nextImg = document.querySelector('.fa-angle-right');
+const prevImg = document.querySelector('fa-angle-left');
+
 
 function hideLoader() {
     loader.classList.add('hide');
@@ -20,10 +23,13 @@ if(catID && catID !== '1'){
     getPhotos();
 }
 
+// clicked category in bold
+
 if(catID){
     const selector = ".cat" + catID;
     console.log(selector);
     const link = document.querySelector(selector);
+    console.log(link)
     link.classList.add("bold");
 } else{
     const all = document.querySelector('.all');
@@ -42,26 +48,42 @@ function loadPhotosByCat(catID) {
         .then(showPhotos);
 }
 
-
-
 function showPhotos(photo) {
     console.log(photo);
-    photo.forEach(photo => {
-     if(photo._embedded["wp:featuredmedia"][0].media_details.sizes.large) {
-         const copy = template.cloneNode(true);
+    photo.forEach((photo, i) => {
+        const copy = template.cloneNode(true);
+       let activeImg ="";
+        if(photo._embedded["wp:featuredmedia"][0].media_details.sizes.large) {
+            activeImg = photo._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
          copy.querySelector('.img').style.backgroundImage = `url(${photo._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url})`;
-         document.querySelector('.gallery__container').appendChild(copy);
+         }
+         else{
+            activeImg = photo._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+            copy.querySelector('.img').style.backgroundImage = `url(${photo._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url})`;
+         }
+        copy.querySelector('.img').classList.add(i);
+         copy.querySelector('.img').addEventListener("click", function() {
+             modal.classList.add('show_modal');
+             modal.querySelector('img').src = activeImg;
+             document.querySelector("body").style.overflow = 'hidden';
+         });
 
-     }
-     else{
-         const copy = template.cloneNode(true);
-         copy.querySelector('.img').style.backgroundImage = `url(${photo._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url})`;
-         document.querySelector('.gallery__container').appendChild(copy);
-     }
-
-});
+     document.querySelector('.gallery__container').appendChild(copy);
+    });
     hideLoader();
 }
-photo.addEventListener("click", function(){
-    modal.classList.add('show_modal');
+
+ex.addEventListener('click', function(){
+    modal.classList.remove('show_modal');
+    document.querySelector("body").style.overflow = 'auto';
 });
+
+
+
+nextImg.addEventListener('click', function(){
+    
+    modal.querySelector('img').src = ";"
+});
+
+
+

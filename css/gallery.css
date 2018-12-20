@@ -86,5 +86,25 @@ transform: scale(1.1);
 }
 
 .show_modal{
-    display: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.show_modal img {
+    max-width: 90%;
+}
+
+.modal i{
+    color: var(--color-light);
+    font-size: 2.5em;
+    z-index: 2;
+    margin: 8px;
+    cursor: pointer
+}
+
+.fa-times-circle{
+    position: absolute;
+    right: 10px;
+    top:50px;
 }

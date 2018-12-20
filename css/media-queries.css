@@ -4,6 +4,7 @@
     nav {display: none;}
     main {margin-top: 10px;}
     footer{display: none;}
+
     #menuToggle {display: block;}
     .menu__some {
         margin-left: 0;
@@ -105,7 +106,7 @@
             height: 20vh;
             width: auto;
         }
-        .img{
+        .gallery__container .img{
             width: 150px;
             height: 150px;
         }
