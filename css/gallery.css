@@ -26,6 +26,8 @@ background-size: cover;
     font-family: var( --font-family-complimentary);
     margin-right: 10px;
     margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: var(--color-accent);
 }
 .img:hover{
