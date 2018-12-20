@@ -1,6 +1,6 @@
 /* MEDIA QUERIES*/
 /* Wide screen phone and tablet screens */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
     nav {display: none;}
     main {margin-top: 10px;}
     footer{display: none;}
