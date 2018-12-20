@@ -257,6 +257,7 @@ button:hover {
   height: 100%;
 }
 
+
 /* SECTION ACTING CREDITS */
 .wrapper__credits {
   width: 89%;
@@ -339,6 +340,7 @@ button:hover {
   border: 2px solid var(--color-accent);
 }
 
+
 /* FOOTER */
 footer {
   width: 100%;
@@ -390,6 +392,7 @@ footer {
 .contacts__email {
   margin-top: 0;
 }
+
 
 /* MOBILE NAVIGATION */
 /* reference from: https://codepen.io/ProgrammingRockstar/pen/WadNYO */
@@ -504,6 +507,7 @@ ul a {
   transform: none;
 }
 
+
 /* HEADER */
 .section__header {
   height: 25vh;
@@ -530,6 +534,7 @@ ul a {
   margin-left: 12%;
   height: 100%;
 }
+
 
 /* SECTION ABOUT COMPANY */
 .section__about-company {
@@ -598,6 +603,7 @@ ul a {
   filter: brightness(100%);
 }
 
+
 /* SECTION CONTACTS */
 .contacts__container {
   padding: 10%;
@@ -618,6 +624,7 @@ ul a {
 .contacts__card {
   width: 300px;
 }
+
 
 /* SECTION CREDITS */
 .accordion__container {
@@ -646,4 +653,3 @@ ul a {
   font-size: 1.1em;
   font-weight: 600;
 }
-
