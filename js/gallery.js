@@ -43,7 +43,7 @@ function getPhotos() {
         }
 
 function loadPhotosByCat(catID) {
-    fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/gallery?categories="+catID+'&_embed')
+    fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/gallery?categories="+catID+'&_embed')
         .then(res => res.json())
         .then(showPhotos);
 }
