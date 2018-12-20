@@ -13,7 +13,7 @@ function hideLoader() {
 }
 loadCategory();
 function loadCategory() {
-    fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/categories")
+    fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/categories")
         .then(e => e.json())
 }
 
@@ -37,13 +37,13 @@ if(catID){
 }
 
 function getPhotos() {
-   fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/gallery?_embed&per_page=100")
+   fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/gallery?_embed&per_page=100")
        .then(res => res.json())
        .then(showPhotos);
         }
 
 function loadPhotosByCat(catID) {
-    fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/gallery?categories="+catID+'&_embed')
+    fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/gallery?categories="+catID+'&_embed')
         .then(res => res.json())
         .then(showPhotos);
 }
