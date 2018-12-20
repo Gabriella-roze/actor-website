@@ -64,8 +64,10 @@ function showPhotos(photo) {
             activeImg = photo._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
             copy.querySelector('.img').style.backgroundImage = `url(${photo._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url})`;
          }
-        copy.querySelector('.img').classList.add(i);
-          clickedImgClass = i;
+        //  When adding a class to an element,
+        //  which has to be selected later, the class name has to start with a letter.
+        // https://stackoverflow.com/questions/37270787/uncaught-syntaxerror-failed-to-execute-queryselector-on-document
+        copy.querySelector('.img').classList.add(`pic${i}`);
           copy.querySelector('.img').addEventListener("click", function() {
              clickedImgClass = i;
              console.log(clickedImgClass);
@@ -84,13 +86,19 @@ ex.addEventListener('click', function(){
     document.querySelector("body").style.overflow = 'auto';
 });
 
-
+const galleryContainer = document.querySelector(".gallery__container");
 
 nextImg.addEventListener('click', function(){
   clickedImgClass++;
-  let next = modal.querySelector(`.${clickedImgClass}`);
-  console.log(next);
-  // modal.querySelector(clickedImgClass).src = ";"
+  console.log(clickedImgClass);
+  let nextURL = galleryContainer.querySelector(`.pic${clickedImgClass}`).style.backgroundImage;
+  // We need to remove the "URL(" and ")" from the string that we get.
+  // https://regexr.com/
+  // and
+  // https://www.w3schools.com/jsref/jsref_replace.asp
+  let nextLink = nextURL.replace(/url\(|\)|/gi, '');
+  console.log(nextLink);
+  modal.querySelector('img').src = nextLink;
 });
 
 
