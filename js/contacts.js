@@ -1,6 +1,6 @@
 const contactsImg = document.getElementById("contacts__img");
 
-fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about/100?_embed")
+fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about/100?_embed")
   .then(data => data.json())
   .then( actor => {
     console.log(actor._embedded["wp:featuredmedia"][0].media_details.sizes);
@@ -10,7 +10,7 @@ fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about/100?_embed")
 const contManager = document.getElementById("cont-manager");
 const contActor = document.getElementById("cont-actor");
 
-fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about")
+fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about")
   .then(data => data.json())
   .then(info => {
     info.forEach(elem => {
