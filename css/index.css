@@ -653,3 +653,44 @@ ul a {
   font-size: 1.1em;
   font-weight: 600;
 }
+.movieListGrid, .musicalListGrid, .theatreListGrid, .seriesListGrid {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "a b c"
+                       "a d e c";
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 10% 10% 70% 10%;
+  margin-bottom: 8px;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-accent);
+}
+.creditTitle {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3; 
+}
+.creditYear {
+  grid-row-start: 1;
+  grid-row-end: 3
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.creditRole {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.creditImage {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.creditImageFeatured {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
