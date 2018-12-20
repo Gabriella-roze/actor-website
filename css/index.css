@@ -312,7 +312,7 @@ button:hover {
   margin-right: 0;
 }
 .movie-card img {
-  width: 90%;
+  width: auto;
   height: 120px;
   margin-top: 8px;
 }
