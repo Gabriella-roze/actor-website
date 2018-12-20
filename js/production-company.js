@@ -2,7 +2,7 @@
 // Dynamic text
 const teaxtAboutCompany = document.getElementById("teaxtAboutCompany");
 
-fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about/101")
+fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about/101")
   .then(data => data.json())
   .then( info => {
     teaxtAboutCompany.innerHTML = info.content.rendered;
@@ -13,7 +13,7 @@ const tplThumbnail = document.getElementById("tplCompanyGalleryThumbnails").cont
 const imgThumbnailsParent = document.getElementById("mini-gallery");
 const imgPreview = document.getElementById("img__preview");
 
-fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/umdieecke_posters?_embed")
+fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/umdieecke_posters?_embed")
   .then(data => data.json())
   .then(posters => {
     posters.forEach((poster, i) => {

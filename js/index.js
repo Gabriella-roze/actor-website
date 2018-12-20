@@ -2,7 +2,7 @@
 const artistName = document.getElementById("artistName");
 const artistAboutText = document.getElementById("artistAboutText");
 
-fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about/100")
+fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about/100")
   .then(data => data.json())
   .then( info => {
     artistName.innerHTML = info.title.rendered;
@@ -63,7 +63,7 @@ function previewImage(image, btnClicked) {
 const movieCardTpl = document.getElementById("movieCardTpl").content;
 let movieParent = document.getElementById("credits__movies");
 
-fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/featured_projects/?_embed")
+fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/featured_projects/?_embed")
   .then(data => data.json())
   .then(populateMovies);
 function populateMovies( movies ) {

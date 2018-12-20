@@ -2,7 +2,7 @@
 const manager = document.getElementById("manager");
 const actor = document.getElementById("actor");
 
-fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about")
+fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about")
   .then(data => data.json())
   .then(info => {
     info.forEach(elem => {
