@@ -10,7 +10,7 @@ fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about/100?_embed"
 const contManager = document.getElementById("cont-manager");
 const contActor = document.getElementById("cont-actor");
 
-fetch("https://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about")
+fetch("http://workshopab.com/2nd_exam/wordpress/wp-json/wp/v2/about")
   .then(data => data.json())
   .then(info => {
     info.forEach(elem => {
